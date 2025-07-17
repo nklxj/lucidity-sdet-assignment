@@ -1,0 +1,176 @@
+{
+  "testFLATXDiscountForP1SegmentUser": {
+    "cartValue": 200,
+    "expectedCartValue": 190,
+    "userId": 1,
+    "restaurantId": 1,
+    "offerType": "FLATX",
+    "offerValue": 10,
+    "mockSegment": "p1",
+    "statusCode": 200
+  },
+  "testFLATXPercentDiscountForP1SegmentUser": {
+    "cartValue": 300,
+    "expectedCartValue": 290,
+    "userId": 1,
+    "restaurantId": 1,
+    "offerType": "FLATX%",
+    "offerValue": 10,
+    "mockSegment": "p1",
+    "statusCode": 200
+  },
+  "testFLATXDiscountForP2SegmentUser": {
+    "cartValue": 250,
+    "expectedCartValue": 240,
+    "userId": 2,
+    "restaurantId": 1,
+    "offerType": "FLATX",
+    "offerValue": 10,
+    "mockSegment": "p2",
+    "statusCode": 200
+  },
+  "testFLATXPercentDiscountForP2SegmentUser": {
+    "cartValue": 400,
+    "expectedCartValue": 390,
+    "userId": 2,
+    "restaurantId": 1,
+    "offerType": "FLATX%",
+    "offerValue": 10,
+    "mockSegment": "p2",
+    "statusCode": 200
+  },
+  "testP4SegmentFLATXDiscountForP3SegmentUser": {
+    "cartValue": 200,
+    "userId": 3,
+    "restaurantId": 1,
+    "offerType": "FLATX",
+    "offerValue": 40,
+    "mockSegment": "p4",
+    "expectedCartValue": 200,
+    "statusCode": 200
+  },
+  "testP4SegmentFLATXPercentDiscountForP3SegmentUser": {
+    "cartValue": 200,
+    "userId": 3,
+    "restaurantId": 1,
+    "offerType": "FLATX%",
+    "offerValue": 40,
+    "mockSegment": "p4",
+    "expectedCartValue": 200,
+    "statusCode": 200
+  },
+  "testFlatXDiscountNotAppliedToOtherRestaurants": {
+    "cartValue": 200,
+    "userId": 1,
+    "restaurantId": 1,
+    "offerType": "FLATX",
+    "offerValue": 10,
+    "mockSegment": "p1",
+    "expectedCartValue": 200,
+    "statusCode": 200
+  },
+  "testFlatXPercentDiscountNotAppliedToOtherRestaurants": {
+    "cartValue": 200,
+    "userId": 1,
+    "restaurantId": 1,
+    "offerType": "FLATX%",
+    "offerValue": 10,
+    "mockSegment": "p1",
+    "expectedCartValue": 200,
+    "statusCode": 200
+  },
+  "testInvalidSegment": {
+    "cartValue": 200,
+    "expectedCartValue": 200,
+    "userId": 3,
+    "restaurantId": 1,
+    "offerType": "FLATX",
+    "offerValue": 10,
+    "mockSegment": "invalid_segment",
+    "statusCode": 500
+  },
+  "testSegmentWithoutOffer": {
+    "cartValue": 200,
+    "expectedCartValue": 200,
+    "userId": 4,
+    "restaurantId": 1,
+    "offerType": "FLATX",
+    "offerValue": 10,
+    "mockSegment": "p4",
+    "statusCode": 500
+  },
+  "testInvalidOfferType": {
+    "cartValue": 200,
+    "expectedCartValue": 200,
+    "userId": 1,
+    "restaurantId": 1,
+    "offerType": "RANDOMOFFER",
+    "offerValue": 10,
+    "statusCode": 200
+  },
+  "testZeroCartValue": {
+    "cartValue": 0,
+    "expectedCartValue": -10,
+    "userId": 1,
+    "restaurantId": 1,
+    "offerType": "FLATX",
+    "offerValue": 10,
+    "statusCode": 200
+  },
+  "testNegativeCartValue": {
+    "cartValue": -100,
+    "expectedCartValue": -110,
+    "userId": 1,
+    "restaurantId": 1,
+    "offerType": "FLATX",
+    "offerValue": 10,
+    "statusCode": 200
+  },
+  "testZeroOfferValue": {
+    "cartValue": 200,
+    "expectedCartValue": 200,
+    "userId": 5,
+    "restaurantId": 1,
+    "offerType": "FLATX",
+    "offerValue": 0,
+    "statusCode": 200
+  },
+  "testNegativeOfferValue": {
+    "cartValue": 200,
+    "expectedCartValue": 200,
+    "userId": 6,
+    "restaurantId": 1,
+    "offerType": "FLATX",
+    "offerValue": -20,
+    "statusCode": 200
+  },
+  "testNullSegment": {
+    "cartValue": 200,
+    "expectedCartValue": 200,
+    "userId": 5,
+    "restaurantId": 1,
+    "offerType": "FLATX",
+    "offerValue": 10,
+    "mockSegment": null,
+    "statusCode": 500
+  },
+  "testNullUserId": {
+    "cartValue": 200,
+    "expectedCartValue": 200,
+    "userId": null,
+    "restaurantId": 1,
+    "offerType": "FLATX",
+    "offerValue": 10,
+    "statusCode": 500
+  },
+  "testNullCartValue": {
+    "cartValue": null,
+    "expectedCartValue": -10,
+    "userId": 1,
+    "restaurantId": 1,
+    "offerType": "FLATX",
+    "offerValue": 10,
+    "statusCode": 200
+  }
+}
+
